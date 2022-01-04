@@ -5,7 +5,7 @@ router.get('/welcome',async(req,res)=>{
     await(res.json('{"Msg":"Welcome To Route"}'))
 });
 
-router.get('/getlist',async(req,res)=>{
-    await(res.json('{"Msg":"Get list"}'))
+router.get('/getlistdata',async(req,res)=>{
+    await(res.json('{"Msg":"Get list data"}'))
 });
 
