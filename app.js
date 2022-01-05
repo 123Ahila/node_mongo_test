@@ -1,16 +1,17 @@
 const express = require('express');
-const mongoose = require('mongoose');
-
 const app = express();
+const route = require('./route');
 
-app.get('/',(req,res)=>{
-    res.send("HEllo Wold");
+app.use(route);
+app.get('/',async (req,res)=>{
+    //console.log("This is root");
+    //var resobj = await res.send("This is root from bla!!!!!");
+    var resobj = await res.json({"msg":"This is root from bla!!!!!"});
 });
 
-app.listen(3000,(err)=>{
+app.listen(3000,(err,res)=>{
     if(err){
-        console.log("Server not connected")
+        console.log(err);
     }
     console.log("Server connected");
-});
-
+})

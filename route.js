@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const thing = require('./models/thing');
 
-router.get('/welcome',async(req,res)=>{
-    await(res.json('{"Msg":"Welcome To Route"}'))
+
+router.get('/showList',async(req,res)=>{
+    res.send("This is show list");
 });
 
-router.get('/getlistdata',async(req,res)=>{
-    await(res.json('{"Msg":"Get list data"}'))
-});
-
+module.exports = router;
